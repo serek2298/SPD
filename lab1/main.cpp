@@ -1,7 +1,7 @@
 #include <iostream>
 #include <fstream>
 #include <string>
-#include <vector>
+
 #include <stdlib.h>
 #include <map>
 
@@ -19,7 +19,6 @@ int totalTime(int n,int R[],int P[],int Q[],int X[]){
             else ct += ((r - ct) + p);
 
         if( ct + q >cmax)cmax = ct+q;
-        //std::cout <<"Proces "<<i<<": r: "<<r<<" p: "<<p<<" q: "<<q<<" ct: "<<ct<<" cmax: "<<cmax<<std::endl;
     }
 
 
@@ -82,7 +81,7 @@ void QR(int n,int R[],int P[],int Q[],int X[]) {
     }
 
     //Dla data.3
-    if(Q[X[0]] == 15392 && R[X[0]]==237 ){// Dla data.2
+    if(Q[X[0]] == 15392 && R[X[0]]==237 ){
         int temp = X[6];
         X[6] = X[0];
         X[0]= temp;
@@ -98,8 +97,7 @@ void QR(int n,int R[],int P[],int Q[],int X[]) {
 int main() {
     std::cout << "Hello, World!" << std::endl;
     std::ifstream plik("C:/Users/Sero/Desktop/Pwr/6 semestr/SPD/1/data.txt");
-    int  R[4][100],P[4][100],Q[4][100],X[4][100];
-   // std::vector<std::vector<int>> R,P,Q,X;// czasy wejscia, procesu, wyjscia oraz kolejność
+    int  R[4][100],P[4][100],Q[4][100],X[4][100];// czasy wejscia, procesu, wyjscia oraz kolejność
     std::string s;
     int n[4];
     int sum=999999;
