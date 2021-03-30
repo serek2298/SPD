@@ -23,9 +23,6 @@ int main() {
 
         //////ALGORYTM//////
         for(int k=0;k<11;k++){
-            if(k==6){
-                cout<<"hej";
-            }
             int N = 1 << n[k];
             int* F = new int[N];
             F[0]=0;
